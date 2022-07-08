@@ -1,0 +1,7 @@
+apiVersion: test.io.apiserver/v1alpha1
+kind: Traffic
+metadata:
+  name: test-traffic
+spec:
+  # TODO(user): Add fields here
+  date: "2022.1.12 16:00"

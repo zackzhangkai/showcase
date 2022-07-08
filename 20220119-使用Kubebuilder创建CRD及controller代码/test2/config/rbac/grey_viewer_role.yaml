@@ -1,0 +1,20 @@
+# permissions for end users to view greys.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: grey-viewer-role
+rules:
+- apiGroups:
+  - test.io.apiserver
+  resources:
+  - greys
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - test.io.apiserver
+  resources:
+  - greys/status
+  verbs:
+  - get

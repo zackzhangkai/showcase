@@ -1,0 +1,20 @@
+# permissions for end users to view traffics.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: traffic-viewer-role
+rules:
+- apiGroups:
+  - test.io.apiserver
+  resources:
+  - traffics
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - test.io.apiserver
+  resources:
+  - traffics/status
+  verbs:
+  - get

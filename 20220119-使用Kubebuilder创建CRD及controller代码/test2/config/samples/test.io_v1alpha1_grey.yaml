@@ -1,0 +1,7 @@
+apiVersion: test.io.apiserver/v1alpha1
+kind: Grey
+metadata:
+  name: grey-sample
+spec:
+  # TODO(user): Add fields here
+  date: "2022.1.18 20:30"

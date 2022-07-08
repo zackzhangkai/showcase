@@ -1,0 +1,24 @@
+# permissions for end users to edit greys.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: grey-editor-role
+rules:
+- apiGroups:
+  - test.io.apiserver
+  resources:
+  - greys
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - test.io.apiserver
+  resources:
+  - greys/status
+  verbs:
+  - get
