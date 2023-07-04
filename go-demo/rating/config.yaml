@@ -1,0 +1,9 @@
+mysql:
+  host: localhost:3306
+  user: gorm
+  password: gorm
+  database: review
+url:
+  ratings: 0.0.0.0:8888
+server:
+    port: 8888

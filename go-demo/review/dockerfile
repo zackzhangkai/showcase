@@ -1,0 +1,12 @@
+FROM golang:1.17.12-cclinux21.08.1 as builder
+WORKDIR /app
+ADD . /app
+RUN make build
+
+FROM alpine:3.14.2
+RUN ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/Shanghai" > /etc/timezone
+WORKDIR /
+COPY --from=builder /app/config-prod.yaml /config.yaml
+COPY --from=builder /app/reviews /
+EXPOSE 8080
+CMD [ "/reviews" ]

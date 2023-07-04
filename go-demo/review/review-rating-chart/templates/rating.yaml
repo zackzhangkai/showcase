@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rating-v1
+  labels:
+    app: rating
+    version: v1
+    sidecar.istio.io/inject: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rating
+  template:
+    metadata:
+      labels:
+        app: rating
+        version: v1
+        sidecar.istio.io/inject: "true"
+      annotations:
+        sidecar.istio.io/inject: "true"
+    spec:
+      containers:
+        - name: app
+          image: zackzhangkai/ratings-kitex:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8888
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rating
+  labels:
+    app: rating
+spec:
+  selector:
+    app: rating
+  ports:
+    - name: grpc-8888
+      port: 8888
+      targetPort: 8888
+  type: ClusterIP

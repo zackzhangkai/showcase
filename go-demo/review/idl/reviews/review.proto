@@ -1,0 +1,94 @@
+// idl/hello/hello.proto
+syntax = "proto3";
+
+package review;
+
+option go_package = "reviews/review";
+
+import "api.proto";
+
+message Review {
+  int64 ID = 1;
+  string Name = 2;
+  int64  GoodsID = 3;
+  string Content = 4;
+  string Author = 5;
+}
+
+enum Code {
+  Success = 0;
+  ParamInvalid = 1;
+  DBErr = 2;
+  InternalErr = 3;
+}
+
+message CreateReviewReq{
+  string Name = 1 [(api.body) = "name", (api.form) = "name", (api.vd) = "(len($) > 0 && len($) < 100)"];
+  int64  GoodsID = 2 [(api.body) = "goods_id", (api.form) = "goods_id", (api.vd) = "$>0"];
+  string Content = 3 [(api.body) = "content", (api.form) = "content", (api.vd) = "(len($) > 0 && len($) < 1000)"];
+  string Author = 4 [(api.body) = "author", (api.form) = "author", (api.vd) = "(len($) > 0 && len($) < 1000)"];
+  int64 Star = 5 [(api.body) = "star", (api.form) = "star", (api.vd) = "$>0"];
+}
+
+message CreateReviewResp{
+  Code Code = 1;
+  string Msg = 2;
+}
+
+message QueryReviewReq{
+  string Keyword = 1 [(api.query) = "keyword", (api.form) = "keyword"];
+  int64 GoodsID = 2 [(api.query) = "goods_id", (api.form) = "goods_id", (api.vd) = "$>0"];
+  int64 Page = 3 [(api.query) = "page", (api.form) = "page", (api.vd) = "$>0"];
+  int64 PageSize = 4 [(api.query) = "page_size", (api.form) = "page_size", (api.vd) = "($ > 0 || $ <= 100)"];
+}
+
+message Data{
+  repeated Review Review = 1;
+  int64 Total = 2;
+  int64 Star = 3;
+}
+
+message QueryReviewResp{
+  Code Code = 1;
+  string Msg = 2;
+  Data Data = 3;
+}
+
+message DeleteReviewReq{
+  int64 ID = 1 [(api.path) = "id", (api.vd) = "$>0"];
+}
+
+message DeleteReviewResp{
+  Code Code = 1;
+  string Msg = 2;
+}
+
+message UpdateReviewReq{
+  int64 ID= 1 [(api.body) = "id", (api.vd) = "$>0"];
+  string Name = 2 [(api.body) = "name", (api.form) = "name", (api.vd) = "(len($) > 0 && len($) < 100)"];
+  string Content = 3 [(api.body) = "content", (api.form) = "content", (api.vd) = "(len($) > 0 && len($) < 1000)"];
+  int64  GoodsID = 4 [(api.body) = "goods_id", (api.form) = "goods_id", (api.vd) = "$>0"];
+  string  Author = 5 [(api.body) = "author", (api.form) = "author", (api.vd) = "(len($) > 0 && len($) < 1000)"];
+  int64 Star = 6 [(api.body) = "star", (api.form) = "star", (api.vd) = "$>0"];
+}
+
+message UpdateReviewResp{
+  Code Code = 1;
+  string Msg = 2;
+}
+
+
+service ReviewService {
+  rpc GetReview(QueryReviewReq) returns(QueryReviewResp) {
+    option (api.get) = "/review/v1.0/detail";
+  }
+  rpc CreateReview(CreateReviewReq) returns(CreateReviewResp) {
+    option (api.post) = "/review/v1.0/create";
+  }
+  rpc UpdateReview(UpdateReviewReq) returns(UpdateReviewResp) {
+    option (api.post) = "/review/v1.0/update";
+  }
+  rpc DeleteReview(DeleteReviewReq) returns(DeleteReviewResp) {
+    option (api.post) = "/review/v1.0/delete:id";
+  }
+}

@@ -1,0 +1,85 @@
+syntax = "proto3";
+
+package ratings;
+
+option go_package = "ratings/rating";
+
+message Rating{
+  int64 Id = 1;
+  int64 ReviewID = 2;
+  int64 Star = 3;
+  int64 GoodsID = 4;
+  int64 Average = 5;
+}
+
+enum Code {
+  Success = 0;
+  ParamInvalid = 1;
+  DBErr = 2;
+}
+
+message CreateReviewReq{
+  int64 ReviewID = 1 [(api.body) = "review_id", (api.form) = "review_id", (api.vd) = "$>0"];
+  int64 Star = 2 [(api.body) = "star", (api.form) = "star", (api.vd) = "(len($) > 0 && len($) < 6)"];
+  int64 GoodsID = 3 [(api.body) = "goods_id", (api.form) = "goods_id", (api.vd) = "(len($) > 0 && len($) < 1000)"];
+  int64 Average = 4 [(api.body) = "average", (api.form) = "average", (api.vd) = "(len($) > 0 && len($) < 1000)"];
+}
+
+message CreateReviewResp{
+  Code Code = 1;
+  string Msg = 2;
+}
+
+message QueryReviewReq{
+  int64 ReviewID = 1 [(api.query) = "review_id", (api.form) = "review_id"];
+  int64 GoodsID = 2 [(api.query) = "goods_id", (api.form) = "goods_id", (api.vd) = "$>0"];
+  int64 Page = 3 [(api.query) = "page", (api.form) = "page", (api.vd) = "$>0"];
+  int64 PageSize = 4 [(api.query) = "page_size", (api.form) = "page_size", (api.vd) = "($ > 0 || $ <= 100)"];
+}
+
+message Data{
+  repeated Rating Rating = 1;
+  int64 Total = 2;
+}
+
+message QueryReviewResp{
+  Code Code = 1;
+  string Msg = 2;
+  Data Data = 3;
+}
+
+message DeleteReviewReq{
+  int64 Id = 1 [(api.path) = "id", (api.vd) = "$>0"];
+}
+
+message DeleteReviewResp{
+  Code Code = 1;
+  string Msg = 2;
+}
+
+message UpdateReviewReq{
+  int64 Id= 1 [(api.path) = "id", (api.vd) = "$>0"];
+  int64 ReviewID = 2 [(api.query) = "review_id", (api.form) = "review_id", (api.vd) = "$>0"];
+  int64 Star = 3 [(api.body) = "star", (api.form) = "star", (api.vd) = "(len($) > 0 && len($) < 6)"];
+  int64 GoodsID = 4 [(api.body) = "goods_id", (api.form) = "goods_id", (api.vd) = "$>0"];
+}
+
+message UpdateReviewResp{
+  Code Code = 1;
+  string Msg = 2;
+}
+
+service ReviewService {
+  rpc GetReview(QueryReviewReq) returns(QueryReviewResp) {
+    option (api.get) = "/rating/v1.0/detail";
+  }
+  rpc CreateReview(CreateReviewReq) returns(CreateReviewResp) {
+    option (api.post) = "/rating/v1.0/create";
+  }
+  rpc UpdateReview(UpdateReviewReq) returns(UpdateReviewResp) {
+    option (api.post) = "/rating/v1.0/update";
+  }
+  rpc DeleteReview(DeleteReviewReq) returns(DeleteReviewResp) {
+    option (api.post) = "/rating/v1.0/delete:id";
+  }
+}

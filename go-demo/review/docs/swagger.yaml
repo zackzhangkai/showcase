@@ -1,0 +1,224 @@
+basePath: /
+definitions:
+  review.CreateReviewResp:
+    properties:
+      Code:
+        type: integer
+      Msg:
+        type: string
+    type: object
+  review.Data:
+    properties:
+      Review:
+        items:
+          $ref: '#/definitions/review.Review'
+        type: array
+      Star:
+        type: integer
+      Total:
+        type: integer
+    type: object
+  review.DeleteReviewResp:
+    properties:
+      Code:
+        type: integer
+      Msg:
+        type: string
+    type: object
+  review.QueryReviewResp:
+    properties:
+      Code:
+        type: integer
+      Data:
+        $ref: '#/definitions/review.Data'
+        type: object
+      Msg:
+        type: string
+    type: object
+  review.Review:
+    properties:
+      Author:
+        type: string
+      Content:
+        type: string
+      GoodsID:
+        type: integer
+      ID:
+        type: integer
+      Name:
+        type: string
+    type: object
+  review.UpdateReviewResp:
+    properties:
+      Code:
+        type: integer
+      Msg:
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact:
+    name: hertz-contrib
+    url: https://github.com/hertz-contrib
+  description: This is a demo using Hertz.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: 评价系统
+  version: "1.0"
+paths:
+  /hello:
+    get: {}
+  /ping:
+    get:
+      consumes:
+      - application/json
+      description: 测试 Description
+      produces:
+      - application/json
+      summary: 测试 Summary
+  /review/v1.0/create:
+    post:
+      consumes:
+      - application/json
+      description: 增加评论
+      parameters:
+      - description: 商品ID
+        in: body
+        name: goods_id
+        required: true
+        schema:
+          type: integer
+      - description: 评论内容
+        in: body
+        name: content
+        required: true
+        schema:
+          type: string
+      - description: 评论作者
+        in: body
+        name: author
+        required: true
+        schema:
+          type: string
+      - description: 评论名称
+        in: body
+        name: name
+        required: true
+        schema:
+          type: string
+      - description: 评论星级
+        in: body
+        name: star
+        required: true
+        schema:
+          type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/review.CreateReviewResp'
+      summary: 增加评论
+  /review/v1.0/delete:review_id:
+    post:
+      consumes:
+      - application/json
+      description: 删除评论
+      parameters:
+      - description: 评论ID
+        in: path
+        name: review_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/review.DeleteReviewResp'
+      summary: 删除评论
+  /review/v1.0/detail:
+    get:
+      consumes:
+      - application/json
+      description: 获取评论详情
+      parameters:
+      - description: 商品ID，一个商品有多个评论
+        in: query
+        name: goods_id
+        required: true
+        type: integer
+      - description: 页码
+        in: query
+        name: page
+        required: true
+        type: integer
+      - description: 每页条数
+        in: query
+        name: page_size
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/review.QueryReviewResp'
+      summary: 获取评论详情
+  /review/v1.0/update:review_id:
+    post:
+      consumes:
+      - application/json
+      description: 修改评论
+      parameters:
+      - description: 评论ID
+        in: body
+        name: review_id
+        required: true
+        schema:
+          type: integer
+      - description: 商品ID
+        in: body
+        name: goods_id
+        required: true
+        schema:
+          type: integer
+      - description: 评论内容
+        in: body
+        name: content
+        required: true
+        schema:
+          type: string
+      - description: 评论作者
+        in: body
+        name: author
+        required: true
+        schema:
+          type: string
+      - description: 评论名称
+        in: body
+        name: name
+        required: true
+        schema:
+          type: string
+      - description: 评论星级
+        in: body
+        name: star
+        required: true
+        schema:
+          type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/review.UpdateReviewResp'
+      summary: 修改评论
+schemes:
+- http
+swagger: "2.0"

@@ -1,0 +1,340 @@
+{
+    "schemes": [
+        "http"
+    ],
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a demo using Hertz.",
+        "title": "评价系统",
+        "contact": {
+            "name": "hertz-contrib",
+            "url": "https://github.com/hertz-contrib"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "paths": {
+        "/hello": {
+            "get": {}
+        },
+        "/ping": {
+            "get": {
+                "description": "测试 Description",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "测试 Summary"
+            }
+        },
+        "/review/v1.0/create": {
+            "post": {
+                "description": "增加评论",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "增加评论",
+                "parameters": [
+                    {
+                        "description": "商品ID",
+                        "name": "goods_id",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "description": "评论内容",
+                        "name": "content",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "评论作者",
+                        "name": "author",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "评论名称",
+                        "name": "name",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "评论星级",
+                        "name": "star",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/review.CreateReviewResp"
+                        }
+                    }
+                }
+            }
+        },
+        "/review/v1.0/delete:review_id": {
+            "post": {
+                "description": "删除评论",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "删除评论",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "评论ID",
+                        "name": "review_id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/review.DeleteReviewResp"
+                        }
+                    }
+                }
+            }
+        },
+        "/review/v1.0/detail": {
+            "get": {
+                "description": "获取评论详情",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "获取评论详情",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "商品ID，一个商品有多个评论",
+                        "name": "goods_id",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "integer",
+                        "description": "页码",
+                        "name": "page",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "integer",
+                        "description": "每页条数",
+                        "name": "page_size",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/review.QueryReviewResp"
+                        }
+                    }
+                }
+            }
+        },
+        "/review/v1.0/update:review_id": {
+            "post": {
+                "description": "修改评论",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "修改评论",
+                "parameters": [
+                    {
+                        "description": "评论ID",
+                        "name": "review_id",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "description": "商品ID",
+                        "name": "goods_id",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "description": "评论内容",
+                        "name": "content",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "评论作者",
+                        "name": "author",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "评论名称",
+                        "name": "name",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "评论星级",
+                        "name": "star",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/review.UpdateReviewResp"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "review.CreateReviewResp": {
+            "type": "object",
+            "properties": {
+                "Code": {
+                    "type": "integer"
+                },
+                "Msg": {
+                    "type": "string"
+                }
+            }
+        },
+        "review.Data": {
+            "type": "object",
+            "properties": {
+                "Review": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/review.Review"
+                    }
+                },
+                "Star": {
+                    "type": "integer"
+                },
+                "Total": {
+                    "type": "integer"
+                }
+            }
+        },
+        "review.DeleteReviewResp": {
+            "type": "object",
+            "properties": {
+                "Code": {
+                    "type": "integer"
+                },
+                "Msg": {
+                    "type": "string"
+                }
+            }
+        },
+        "review.QueryReviewResp": {
+            "type": "object",
+            "properties": {
+                "Code": {
+                    "type": "integer"
+                },
+                "Data": {
+                    "type": "object",
+                    "$ref": "#/definitions/review.Data"
+                },
+                "Msg": {
+                    "type": "string"
+                }
+            }
+        },
+        "review.Review": {
+            "type": "object",
+            "properties": {
+                "Author": {
+                    "type": "string"
+                },
+                "Content": {
+                    "type": "string"
+                },
+                "GoodsID": {
+                    "type": "integer"
+                },
+                "ID": {
+                    "type": "integer"
+                },
+                "Name": {
+                    "type": "string"
+                }
+            }
+        },
+        "review.UpdateReviewResp": {
+            "type": "object",
+            "properties": {
+                "Code": {
+                    "type": "integer"
+                },
+                "Msg": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

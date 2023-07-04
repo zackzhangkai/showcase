@@ -1,0 +1,76 @@
+syntax = "proto3";
+
+package ratings;
+
+option go_package = "rating";
+
+message Rating{
+  int64 ID = 1;
+  int64 ReviewID = 2;
+  int64 Star = 3;
+  int64 GoodsID = 4;
+  int64 Average = 5;
+}
+
+enum Code {
+  Success = 0;
+  ParamInvalid = 1;
+  DBErr = 2;
+}
+
+message CreateRatingReq{
+  int64 ReviewID = 1;
+  int64 Star = 2 ;
+  int64 GoodsID = 3 ;
+}
+
+message CreateRatingResp{
+  Code Code = 1;
+  string Msg = 2;
+}
+
+message QueryRatingReq{
+  int64 ReviewID = 1 ;
+  int64 GoodsID = 2 ;
+  int64 Page = 3 ;
+  int64 PageSize = 4 ;
+}
+
+message Data{
+  repeated Rating Rating = 1;
+  int64 Total = 2;
+}
+
+message QueryRatingResp{
+  Code Code = 1;
+  string Msg = 2;
+  Data Data = 3;
+}
+
+message DeleteRatingReq{
+  int64 Id = 1;
+}
+
+message DeleteRatingResp{
+  Code Code = 1;
+  string Msg = 2;
+}
+
+message UpdateRatingReq{
+  int64 ID= 1 ;
+  int64 ReviewID = 2 ;
+  int64 Star = 3 ;
+  int64 GoodsID = 4 ;
+}
+
+message UpdateRatingResp{
+  Code Code = 1;
+  string Msg = 2;
+}
+
+service RatingService {
+  rpc GetRating(QueryRatingReq) returns(QueryRatingResp) {}
+  rpc CreateRating(CreateRatingReq) returns(CreateRatingResp) {}
+  rpc UpdateRating(UpdateRatingReq) returns(UpdateRatingResp) {}
+  rpc DeleteRating(DeleteRatingReq) returns(DeleteRatingResp) {}
+}

@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+  labels:
+    app: mysql
+spec:
+  ports:
+    - port: 3306
+  selector:
+    app: mysql
+  clusterIP: None
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+        - name: mysql
+          image: mysql
+          env:
+            - name: MYSQL_USER
+              value: gorm
+            - name: MYSQL_PASSWORD
+              value: gorm
+            - name: MYSQL_DATABASE
+              value: review
+            - name: MYSQL_RANDOM_ROOT_PASSWORD
+              value: "yes"
+          ports:
+            - containerPort: 3306
+          volumeMounts:
+            - name: mysql-local-storage
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: mysql-local-storage
+          emptyDir: {}

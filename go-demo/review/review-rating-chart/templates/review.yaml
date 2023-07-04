@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: review
+  labels:
+    app: review
+    version: v1
+    sidecar.istio.io/inject: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: review
+  template:
+    metadata:
+      labels:
+        app: review
+        version: v1
+        sidecar.istio.io/inject: "true"
+      annotations:
+        sidecar.istio.io/inject: "true"
+    spec:
+      containers:
+        - name: app
+          image: zackzhangkai/reviews-hz:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: review
+  labels:
+    app: review
+spec:
+  selector:
+    app: review
+  ports:
+    - name: http-80
+      port: 80
+      targetPort: 8080
+  type: NodePort

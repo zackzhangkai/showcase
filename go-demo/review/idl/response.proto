@@ -1,0 +1,13 @@
+// idl/hello/hello.proto
+syntax = "proto3";
+
+package response;
+
+option go_package = "reviews";
+import "google/protobuf/any.proto";
+
+message RespBody {
+  google.protobuf.Any Data = 1;
+  int32 Code = 2;
+  string Message = 3;
+}

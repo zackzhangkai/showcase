@@ -1,0 +1,528 @@
+# github.com/KyleBanks/depth v1.2.1
+## explicit
+github.com/KyleBanks/depth
+# github.com/PuerkitoBio/purell v1.1.1
+## explicit
+github.com/PuerkitoBio/purell
+# github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578
+## explicit
+github.com/PuerkitoBio/urlesc
+# github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751
+## explicit
+github.com/alecthomas/template
+github.com/alecthomas/template/parse
+# github.com/apache/thrift v0.13.0
+## explicit
+github.com/apache/thrift/lib/go/thrift
+# github.com/bytedance/go-tagexpr/v2 v2.9.2
+## explicit; go 1.14
+github.com/bytedance/go-tagexpr/v2
+github.com/bytedance/go-tagexpr/v2/binding
+github.com/bytedance/go-tagexpr/v2/binding/gjson
+github.com/bytedance/go-tagexpr/v2/validator
+# github.com/bytedance/gopkg v0.0.0-20230531144706-a12972768317
+## explicit; go 1.15
+github.com/bytedance/gopkg/cloud/circuitbreaker
+github.com/bytedance/gopkg/cloud/metainfo
+github.com/bytedance/gopkg/collection/skipmap
+github.com/bytedance/gopkg/internal/hack
+github.com/bytedance/gopkg/internal/runtimex
+github.com/bytedance/gopkg/internal/wyhash
+github.com/bytedance/gopkg/lang/fastrand
+github.com/bytedance/gopkg/lang/mcache
+github.com/bytedance/gopkg/lang/syncx
+github.com/bytedance/gopkg/util/gopool
+github.com/bytedance/gopkg/util/logger
+github.com/bytedance/gopkg/util/xxhash3
+# github.com/bytedance/sonic v1.8.8
+## explicit; go 1.15
+github.com/bytedance/sonic
+github.com/bytedance/sonic/ast
+github.com/bytedance/sonic/decoder
+github.com/bytedance/sonic/encoder
+github.com/bytedance/sonic/internal/caching
+github.com/bytedance/sonic/internal/cpu
+github.com/bytedance/sonic/internal/jit
+github.com/bytedance/sonic/internal/loader
+github.com/bytedance/sonic/internal/native
+github.com/bytedance/sonic/internal/native/avx
+github.com/bytedance/sonic/internal/native/avx2
+github.com/bytedance/sonic/internal/native/sse
+github.com/bytedance/sonic/internal/native/types
+github.com/bytedance/sonic/internal/resolver
+github.com/bytedance/sonic/internal/rt
+github.com/bytedance/sonic/loader
+github.com/bytedance/sonic/option
+github.com/bytedance/sonic/unquote
+github.com/bytedance/sonic/utf8
+# github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311
+## explicit; go 1.15
+github.com/chenzhuoyu/base64x
+# github.com/chenzhuoyu/iasm v0.0.0-20230222070914-0b1b64b0e762
+## explicit; go 1.16
+github.com/chenzhuoyu/iasm/expr
+github.com/chenzhuoyu/iasm/x86_64
+# github.com/choleraehyq/pid v0.0.16
+## explicit; go 1.10
+github.com/choleraehyq/pid
+# github.com/cloudwego/configmanager v0.2.0
+## explicit; go 1.15
+github.com/cloudwego/configmanager/iface
+github.com/cloudwego/configmanager/util
+# github.com/cloudwego/fastpb v0.0.4
+## explicit; go 1.17
+github.com/cloudwego/fastpb
+# github.com/cloudwego/frugal v0.1.6
+## explicit; go 1.16
+github.com/cloudwego/frugal
+github.com/cloudwego/frugal/internal/atm/abi
+github.com/cloudwego/frugal/internal/atm/emu
+github.com/cloudwego/frugal/internal/atm/hir
+github.com/cloudwego/frugal/internal/atm/pgen
+github.com/cloudwego/frugal/internal/atm/rtx
+github.com/cloudwego/frugal/internal/binary/decoder
+github.com/cloudwego/frugal/internal/binary/defs
+github.com/cloudwego/frugal/internal/binary/encoder
+github.com/cloudwego/frugal/internal/loader
+github.com/cloudwego/frugal/internal/opts
+github.com/cloudwego/frugal/internal/rt
+github.com/cloudwego/frugal/internal/utils
+github.com/cloudwego/frugal/iov
+# github.com/cloudwego/hertz v0.6.4
+## explicit; go 1.16
+github.com/cloudwego/hertz/internal/bytesconv
+github.com/cloudwego/hertz/internal/bytestr
+github.com/cloudwego/hertz/internal/nocopy
+github.com/cloudwego/hertz/internal/stats
+github.com/cloudwego/hertz/pkg/app
+github.com/cloudwego/hertz/pkg/app/client/retry
+github.com/cloudwego/hertz/pkg/app/middlewares/server/recovery
+github.com/cloudwego/hertz/pkg/app/server
+github.com/cloudwego/hertz/pkg/app/server/binding
+github.com/cloudwego/hertz/pkg/app/server/registry
+github.com/cloudwego/hertz/pkg/app/server/render
+github.com/cloudwego/hertz/pkg/common/bytebufferpool
+github.com/cloudwego/hertz/pkg/common/compress
+github.com/cloudwego/hertz/pkg/common/config
+github.com/cloudwego/hertz/pkg/common/errors
+github.com/cloudwego/hertz/pkg/common/hlog
+github.com/cloudwego/hertz/pkg/common/json
+github.com/cloudwego/hertz/pkg/common/stackless
+github.com/cloudwego/hertz/pkg/common/timer
+github.com/cloudwego/hertz/pkg/common/tracer
+github.com/cloudwego/hertz/pkg/common/tracer/stats
+github.com/cloudwego/hertz/pkg/common/tracer/traceinfo
+github.com/cloudwego/hertz/pkg/common/utils
+github.com/cloudwego/hertz/pkg/network
+github.com/cloudwego/hertz/pkg/network/dialer
+github.com/cloudwego/hertz/pkg/network/netpoll
+github.com/cloudwego/hertz/pkg/network/standard
+github.com/cloudwego/hertz/pkg/protocol
+github.com/cloudwego/hertz/pkg/protocol/client
+github.com/cloudwego/hertz/pkg/protocol/consts
+github.com/cloudwego/hertz/pkg/protocol/http1
+github.com/cloudwego/hertz/pkg/protocol/http1/ext
+github.com/cloudwego/hertz/pkg/protocol/http1/factory
+github.com/cloudwego/hertz/pkg/protocol/http1/proxy
+github.com/cloudwego/hertz/pkg/protocol/http1/req
+github.com/cloudwego/hertz/pkg/protocol/http1/resp
+github.com/cloudwego/hertz/pkg/protocol/suite
+github.com/cloudwego/hertz/pkg/route
+github.com/cloudwego/hertz/pkg/route/consts
+github.com/cloudwego/hertz/pkg/route/param
+# github.com/cloudwego/kitex v0.6.1
+## explicit; go 1.13
+github.com/cloudwego/kitex
+github.com/cloudwego/kitex/client
+github.com/cloudwego/kitex/client/callopt
+github.com/cloudwego/kitex/internal
+github.com/cloudwego/kitex/internal/client
+github.com/cloudwego/kitex/internal/configutil
+github.com/cloudwego/kitex/internal/server
+github.com/cloudwego/kitex/internal/wpool
+github.com/cloudwego/kitex/pkg/acl
+github.com/cloudwego/kitex/pkg/circuitbreak
+github.com/cloudwego/kitex/pkg/connpool
+github.com/cloudwego/kitex/pkg/consts
+github.com/cloudwego/kitex/pkg/diagnosis
+github.com/cloudwego/kitex/pkg/discovery
+github.com/cloudwego/kitex/pkg/endpoint
+github.com/cloudwego/kitex/pkg/event
+github.com/cloudwego/kitex/pkg/fallback
+github.com/cloudwego/kitex/pkg/generic
+github.com/cloudwego/kitex/pkg/generic/descriptor
+github.com/cloudwego/kitex/pkg/generic/proto
+github.com/cloudwego/kitex/pkg/generic/thrift
+github.com/cloudwego/kitex/pkg/gofunc
+github.com/cloudwego/kitex/pkg/http
+github.com/cloudwego/kitex/pkg/kerrors
+github.com/cloudwego/kitex/pkg/klog
+github.com/cloudwego/kitex/pkg/limit
+github.com/cloudwego/kitex/pkg/limiter
+github.com/cloudwego/kitex/pkg/loadbalance
+github.com/cloudwego/kitex/pkg/loadbalance/lbcache
+github.com/cloudwego/kitex/pkg/profiler
+github.com/cloudwego/kitex/pkg/protocol/bthrift
+github.com/cloudwego/kitex/pkg/proxy
+github.com/cloudwego/kitex/pkg/registry
+github.com/cloudwego/kitex/pkg/remote
+github.com/cloudwego/kitex/pkg/remote/bound
+github.com/cloudwego/kitex/pkg/remote/codec
+github.com/cloudwego/kitex/pkg/remote/codec/perrors
+github.com/cloudwego/kitex/pkg/remote/codec/protobuf
+github.com/cloudwego/kitex/pkg/remote/codec/thrift
+github.com/cloudwego/kitex/pkg/remote/connpool
+github.com/cloudwego/kitex/pkg/remote/remotecli
+github.com/cloudwego/kitex/pkg/remote/remotesvr
+github.com/cloudwego/kitex/pkg/remote/trans
+github.com/cloudwego/kitex/pkg/remote/trans/detection
+github.com/cloudwego/kitex/pkg/remote/trans/gonet
+github.com/cloudwego/kitex/pkg/remote/trans/invoke
+github.com/cloudwego/kitex/pkg/remote/trans/netpoll
+github.com/cloudwego/kitex/pkg/remote/trans/netpollmux
+github.com/cloudwego/kitex/pkg/remote/trans/nphttp2
+github.com/cloudwego/kitex/pkg/remote/trans/nphttp2/codes
+github.com/cloudwego/kitex/pkg/remote/trans/nphttp2/grpc
+github.com/cloudwego/kitex/pkg/remote/trans/nphttp2/grpc/grpcframe
+github.com/cloudwego/kitex/pkg/remote/trans/nphttp2/grpc/syscall
+github.com/cloudwego/kitex/pkg/remote/trans/nphttp2/metadata
+github.com/cloudwego/kitex/pkg/remote/trans/nphttp2/peer
+github.com/cloudwego/kitex/pkg/remote/trans/nphttp2/status
+github.com/cloudwego/kitex/pkg/remote/transmeta
+github.com/cloudwego/kitex/pkg/retry
+github.com/cloudwego/kitex/pkg/rpcinfo
+github.com/cloudwego/kitex/pkg/rpcinfo/remoteinfo
+github.com/cloudwego/kitex/pkg/rpctimeout
+github.com/cloudwego/kitex/pkg/serviceinfo
+github.com/cloudwego/kitex/pkg/stats
+github.com/cloudwego/kitex/pkg/streaming
+github.com/cloudwego/kitex/pkg/transmeta
+github.com/cloudwego/kitex/pkg/utils
+github.com/cloudwego/kitex/pkg/warmup
+github.com/cloudwego/kitex/pkg/xds
+github.com/cloudwego/kitex/server
+github.com/cloudwego/kitex/transport
+# github.com/cloudwego/netpoll v0.4.0
+## explicit; go 1.15
+github.com/cloudwego/netpoll
+github.com/cloudwego/netpoll/mux
+# github.com/cloudwego/thriftgo v0.2.11
+## explicit; go 1.13
+github.com/cloudwego/thriftgo/generator/golang/extension/meta
+github.com/cloudwego/thriftgo/generator/golang/extension/unknown
+github.com/cloudwego/thriftgo/parser
+github.com/cloudwego/thriftgo/pkg/reserved
+github.com/cloudwego/thriftgo/semantic
+# github.com/fsnotify/fsnotify v1.6.0
+## explicit; go 1.16
+github.com/fsnotify/fsnotify
+# github.com/go-openapi/jsonpointer v0.19.5
+## explicit; go 1.13
+github.com/go-openapi/jsonpointer
+# github.com/go-openapi/jsonreference v0.19.6
+## explicit; go 1.13
+github.com/go-openapi/jsonreference
+# github.com/go-openapi/spec v0.20.4
+## explicit; go 1.13
+github.com/go-openapi/spec
+# github.com/go-openapi/swag v0.19.15
+## explicit; go 1.11
+github.com/go-openapi/swag
+# github.com/go-sql-driver/mysql v1.7.0
+## explicit; go 1.13
+github.com/go-sql-driver/mysql
+# github.com/golang/protobuf v1.5.3
+## explicit; go 1.9
+github.com/golang/protobuf/jsonpb
+github.com/golang/protobuf/proto
+github.com/golang/protobuf/protoc-gen-go/descriptor
+github.com/golang/protobuf/protoc-gen-go/plugin
+github.com/golang/protobuf/ptypes/any
+github.com/golang/protobuf/ptypes/duration
+github.com/golang/protobuf/ptypes/empty
+github.com/golang/protobuf/ptypes/struct
+github.com/golang/protobuf/ptypes/timestamp
+github.com/golang/protobuf/ptypes/wrappers
+# github.com/google/pprof v0.0.0-20220608213341-c488b8fa1db3
+## explicit; go 1.17
+github.com/google/pprof/profile
+# github.com/hashicorp/hcl v1.0.0
+## explicit
+github.com/hashicorp/hcl
+github.com/hashicorp/hcl/hcl/ast
+github.com/hashicorp/hcl/hcl/parser
+github.com/hashicorp/hcl/hcl/printer
+github.com/hashicorp/hcl/hcl/scanner
+github.com/hashicorp/hcl/hcl/strconv
+github.com/hashicorp/hcl/hcl/token
+github.com/hashicorp/hcl/json/parser
+github.com/hashicorp/hcl/json/scanner
+github.com/hashicorp/hcl/json/token
+# github.com/henrylee2cn/ameda v1.4.10
+## explicit; go 1.13
+github.com/henrylee2cn/ameda
+# github.com/henrylee2cn/goutil v0.0.0-20210127050712-89660552f6f8
+## explicit; go 1.12
+github.com/henrylee2cn/goutil
+github.com/henrylee2cn/goutil/errors
+# github.com/hertz-contrib/logger/accesslog v0.0.0-20230611153805-d6d12b3c0bd9
+## explicit; go 1.16
+github.com/hertz-contrib/logger/accesslog
+github.com/hertz-contrib/logger/accesslog/internal/fasttemplate
+# github.com/hertz-contrib/swagger v0.0.0-20230410084747-96f1a1b976ab
+## explicit; go 1.18
+github.com/hertz-contrib/swagger
+# github.com/jhump/protoreflect v1.8.2
+## explicit; go 1.13
+github.com/jhump/protoreflect/codec
+github.com/jhump/protoreflect/desc
+github.com/jhump/protoreflect/desc/internal
+github.com/jhump/protoreflect/desc/protoparse
+github.com/jhump/protoreflect/desc/protoparse/ast
+github.com/jhump/protoreflect/dynamic
+github.com/jhump/protoreflect/internal
+github.com/jhump/protoreflect/internal/codec
+# github.com/jinzhu/inflection v1.0.0
+## explicit
+github.com/jinzhu/inflection
+# github.com/jinzhu/now v1.1.5
+## explicit; go 1.12
+github.com/jinzhu/now
+# github.com/josharian/intern v1.0.0
+## explicit; go 1.5
+github.com/josharian/intern
+# github.com/json-iterator/go v1.1.12
+## explicit; go 1.12
+github.com/json-iterator/go
+# github.com/klauspost/cpuid/v2 v2.2.4
+## explicit; go 1.15
+github.com/klauspost/cpuid/v2
+# github.com/magiconair/properties v1.8.7
+## explicit; go 1.19
+github.com/magiconair/properties
+# github.com/mailru/easyjson v0.7.6
+## explicit; go 1.12
+github.com/mailru/easyjson/buffer
+github.com/mailru/easyjson/jlexer
+github.com/mailru/easyjson/jwriter
+# github.com/mitchellh/mapstructure v1.5.0
+## explicit; go 1.14
+github.com/mitchellh/mapstructure
+# github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+## explicit
+github.com/modern-go/concurrent
+# github.com/modern-go/reflect2 v1.0.2
+## explicit; go 1.12
+github.com/modern-go/reflect2
+# github.com/nyaruka/phonenumbers v1.0.55
+## explicit; go 1.13
+github.com/nyaruka/phonenumbers
+# github.com/oleiade/lane v1.0.1
+## explicit; go 1.15
+github.com/oleiade/lane
+# github.com/pelletier/go-toml/v2 v2.0.8
+## explicit; go 1.16
+github.com/pelletier/go-toml/v2
+github.com/pelletier/go-toml/v2/internal/characters
+github.com/pelletier/go-toml/v2/internal/danger
+github.com/pelletier/go-toml/v2/internal/tracker
+github.com/pelletier/go-toml/v2/unstable
+# github.com/spf13/afero v1.9.5
+## explicit; go 1.16
+github.com/spf13/afero
+github.com/spf13/afero/internal/common
+github.com/spf13/afero/mem
+# github.com/spf13/cast v1.5.1
+## explicit; go 1.18
+github.com/spf13/cast
+# github.com/spf13/jwalterweatherman v1.1.0
+## explicit
+github.com/spf13/jwalterweatherman
+# github.com/spf13/pflag v1.0.5
+## explicit; go 1.12
+github.com/spf13/pflag
+# github.com/spf13/viper v1.16.0
+## explicit; go 1.17
+github.com/spf13/viper
+github.com/spf13/viper/internal/encoding
+github.com/spf13/viper/internal/encoding/dotenv
+github.com/spf13/viper/internal/encoding/hcl
+github.com/spf13/viper/internal/encoding/ini
+github.com/spf13/viper/internal/encoding/javaproperties
+github.com/spf13/viper/internal/encoding/json
+github.com/spf13/viper/internal/encoding/toml
+github.com/spf13/viper/internal/encoding/yaml
+# github.com/subosito/gotenv v1.4.2
+## explicit; go 1.18
+github.com/subosito/gotenv
+# github.com/swaggo/files v1.0.1
+## explicit; go 1.16
+github.com/swaggo/files
+# github.com/swaggo/swag v1.8.2
+## explicit; go 1.18
+github.com/swaggo/swag
+# github.com/tidwall/gjson v1.13.0
+## explicit; go 1.12
+github.com/tidwall/gjson
+# github.com/tidwall/match v1.1.1
+## explicit; go 1.15
+github.com/tidwall/match
+# github.com/tidwall/pretty v1.2.0
+## explicit; go 1.16
+github.com/tidwall/pretty
+# github.com/twitchyliquid64/golang-asm v0.15.1
+## explicit; go 1.13
+github.com/twitchyliquid64/golang-asm/asm/arch
+github.com/twitchyliquid64/golang-asm/bio
+github.com/twitchyliquid64/golang-asm/dwarf
+github.com/twitchyliquid64/golang-asm/goobj
+github.com/twitchyliquid64/golang-asm/obj
+github.com/twitchyliquid64/golang-asm/obj/arm
+github.com/twitchyliquid64/golang-asm/obj/arm64
+github.com/twitchyliquid64/golang-asm/obj/mips
+github.com/twitchyliquid64/golang-asm/obj/ppc64
+github.com/twitchyliquid64/golang-asm/obj/riscv
+github.com/twitchyliquid64/golang-asm/obj/s390x
+github.com/twitchyliquid64/golang-asm/obj/wasm
+github.com/twitchyliquid64/golang-asm/obj/x86
+github.com/twitchyliquid64/golang-asm/objabi
+github.com/twitchyliquid64/golang-asm/src
+github.com/twitchyliquid64/golang-asm/sys
+github.com/twitchyliquid64/golang-asm/unsafeheader
+# golang.org/x/arch v0.2.0
+## explicit; go 1.17
+golang.org/x/arch/x86/x86asm
+# golang.org/x/mod v0.8.0
+## explicit; go 1.17
+golang.org/x/mod/internal/lazyregexp
+golang.org/x/mod/module
+golang.org/x/mod/semver
+# golang.org/x/net v0.10.0
+## explicit; go 1.17
+golang.org/x/net/http/httpguts
+golang.org/x/net/http2
+golang.org/x/net/http2/hpack
+golang.org/x/net/idna
+golang.org/x/net/webdav
+golang.org/x/net/webdav/internal/xml
+# golang.org/x/sync v0.1.0
+## explicit
+golang.org/x/sync/singleflight
+# golang.org/x/sys v0.8.0
+## explicit; go 1.17
+golang.org/x/sys/cpu
+golang.org/x/sys/execabs
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/unix
+golang.org/x/sys/windows
+# golang.org/x/text v0.9.0
+## explicit; go 1.17
+golang.org/x/text/runes
+golang.org/x/text/secure/bidirule
+golang.org/x/text/transform
+golang.org/x/text/unicode/bidi
+golang.org/x/text/unicode/norm
+golang.org/x/text/width
+# golang.org/x/tools v0.6.0
+## explicit; go 1.18
+golang.org/x/tools/go/ast/astutil
+golang.org/x/tools/go/buildutil
+golang.org/x/tools/go/internal/cgo
+golang.org/x/tools/go/loader
+golang.org/x/tools/imports
+golang.org/x/tools/internal/event
+golang.org/x/tools/internal/event/core
+golang.org/x/tools/internal/event/keys
+golang.org/x/tools/internal/event/label
+golang.org/x/tools/internal/fastwalk
+golang.org/x/tools/internal/gocommand
+golang.org/x/tools/internal/gopathwalk
+golang.org/x/tools/internal/imports
+golang.org/x/tools/internal/typeparams
+# google.golang.org/genproto v0.0.0-20230410155749-daa745c078e1
+## explicit; go 1.19
+google.golang.org/genproto/googleapis/rpc/status
+google.golang.org/genproto/protobuf/api
+google.golang.org/genproto/protobuf/field_mask
+google.golang.org/genproto/protobuf/ptype
+google.golang.org/genproto/protobuf/source_context
+# google.golang.org/protobuf v1.30.0
+## explicit; go 1.11
+google.golang.org/protobuf/encoding/protojson
+google.golang.org/protobuf/encoding/prototext
+google.golang.org/protobuf/encoding/protowire
+google.golang.org/protobuf/internal/descfmt
+google.golang.org/protobuf/internal/descopts
+google.golang.org/protobuf/internal/detrand
+google.golang.org/protobuf/internal/encoding/defval
+google.golang.org/protobuf/internal/encoding/json
+google.golang.org/protobuf/internal/encoding/messageset
+google.golang.org/protobuf/internal/encoding/tag
+google.golang.org/protobuf/internal/encoding/text
+google.golang.org/protobuf/internal/errors
+google.golang.org/protobuf/internal/filedesc
+google.golang.org/protobuf/internal/filetype
+google.golang.org/protobuf/internal/flags
+google.golang.org/protobuf/internal/genid
+google.golang.org/protobuf/internal/impl
+google.golang.org/protobuf/internal/order
+google.golang.org/protobuf/internal/pragma
+google.golang.org/protobuf/internal/set
+google.golang.org/protobuf/internal/strs
+google.golang.org/protobuf/internal/version
+google.golang.org/protobuf/proto
+google.golang.org/protobuf/reflect/protodesc
+google.golang.org/protobuf/reflect/protoreflect
+google.golang.org/protobuf/reflect/protoregistry
+google.golang.org/protobuf/runtime/protoiface
+google.golang.org/protobuf/runtime/protoimpl
+google.golang.org/protobuf/types/descriptorpb
+google.golang.org/protobuf/types/known/anypb
+google.golang.org/protobuf/types/known/apipb
+google.golang.org/protobuf/types/known/durationpb
+google.golang.org/protobuf/types/known/emptypb
+google.golang.org/protobuf/types/known/fieldmaskpb
+google.golang.org/protobuf/types/known/sourcecontextpb
+google.golang.org/protobuf/types/known/structpb
+google.golang.org/protobuf/types/known/timestamppb
+google.golang.org/protobuf/types/known/typepb
+google.golang.org/protobuf/types/known/wrapperspb
+google.golang.org/protobuf/types/pluginpb
+# gopkg.in/ini.v1 v1.67.0
+## explicit
+gopkg.in/ini.v1
+# gopkg.in/yaml.v2 v2.4.0
+## explicit; go 1.15
+gopkg.in/yaml.v2
+# gopkg.in/yaml.v3 v3.0.1
+## explicit
+gopkg.in/yaml.v3
+# gorm.io/datatypes v1.1.1-0.20230130040222-c43177d3cf8c => gorm.io/datatypes v1.0.7
+## explicit; go 1.14
+gorm.io/datatypes
+# gorm.io/driver/mysql v1.4.4
+## explicit; go 1.14
+gorm.io/driver/mysql
+# gorm.io/gen v0.3.22 => gorm.io/gen v0.2.0
+## explicit; go 1.14
+gorm.io/gen
+gorm.io/gen/field
+gorm.io/gen/internal/check
+gorm.io/gen/internal/model
+gorm.io/gen/internal/parser
+gorm.io/gen/internal/template
+# gorm.io/gorm v1.24.6 => gorm.io/gorm v1.24.0
+## explicit; go 1.16
+gorm.io/gorm
+gorm.io/gorm/callbacks
+gorm.io/gorm/clause
+gorm.io/gorm/logger
+gorm.io/gorm/migrator
+gorm.io/gorm/schema
+gorm.io/gorm/utils
+gorm.io/gorm/utils/tests
+# gorm.io/hints v1.1.0
+## explicit; go 1.14
+gorm.io/hints
+# gorm.io/plugin/dbresolver v1.3.0
+## explicit; go 1.14
